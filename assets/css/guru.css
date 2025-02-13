@@ -126,6 +126,15 @@ body::-webkit-scrollbar {
     text-align: center;
     height: fit-content;
 }
+
+.najmi{
+   
+    font-family: "Shadows Into Light", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 2px;
+}
+
 footer{
     background-color:rgb(139, 124, 105);
     align-items: center;

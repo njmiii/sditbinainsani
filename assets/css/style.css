@@ -387,6 +387,14 @@ button:hover {
     width: 4%;
 }
 
+.najmi{
+   
+    font-family: "Shadows Into Light", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 2px;
+}
+
 footer {
     background-color: rgb(139, 124, 105);
     align-items: center;

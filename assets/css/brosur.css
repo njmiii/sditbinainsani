@@ -11,10 +11,10 @@ body {
     color: white;
     margin: 0;
     padding: 0;
-
     overflow-x: hidden;
     overflow-y: auto;
     scrollbar-color: none;
+    box-sizing: border-box;
 }
 
 body::-webkit-scrollbar {
@@ -84,7 +84,6 @@ body::-webkit-scrollbar {
     color: white;
 }
 
-
 .atas {
     font-size: large;
    
@@ -144,19 +143,21 @@ body::-webkit-scrollbar {
     text-align: center;
     height: fit-content;
 }
+
+.najmi{
+   
+    font-family: "Shadows Into Light", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 2px;
+}
+
 footer{
     background-color:rgb(139, 124, 105);
     align-items: center;
     justify-content: center;
     display: flex;
     height: 50px;
-}
-body {
-    background-color: #1E3A5F;
-    color: white;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 
