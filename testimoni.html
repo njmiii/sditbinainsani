@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <title>Testimoni Sekolah</title>
+    
+    <!-- Firebase SDK versi 8 (Gunakan ini agar kompatibel dengan testimoni.js) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <link rel="stylesheet" href="assets/css/testimoni.css">
+</head>
+<body>
+     <!-- Header -->
+     <div class="atas">
+        <div class="ul_atas">
+            <li><img src="assets/img/logo.png" width="200" height="200" alt="Logo Sekolah" /></li>
+            <li class="tentang_kami">Sekolah Dasar Islam Terpadu Bina Insani</li>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <ul class="ul_navbar">
+            <li class="li_navbar"><a href="index.html" class="a_navbar">HOME</a></li>
+            <li class="li_navbar"><a href="about.html" class="a_navbar">ABOUT</a></li>
+          
+            <li class="li_navbar"><a href="brosur.html" class="a_navbar">BROSUR</a></li>
+            <li class="li_navbar"><a href="testimoni.html" class="a_navbar">TESTIMONI</a></li>
+            <li class="li_navbar"><a href="galeri.html" class="a_navbar">GALERI</a></li>
+            <li class="li_navbar"><a href="guru.html" class="a_navbar">GURU</a></li>
+        </ul>
+    </div>
+
+    <!-- Container Testimoni -->
+    <div class="testimoni-container">
+        <h2>Testimoni Orang Tua & Alumni</h2>
+        
+        <!-- List Testimoni (akan diisi otomatis oleh JavaScript) -->
+        <div id="testimoni-list"></div>
+        
+        <!-- Tombol Navigasi Testimoni -->
+        <button class="prev-testimoni" onclick="prevTestimoni()">&#10094;</button>
+        <button class="next-testimoni" onclick="nextTestimoni()">&#10095;</button>
+    </div>
+
+    <!-- Form Input Testimoni -->
+    <div class="testimoni-form">
+        <h3>Kirim Testimoni Anda</h3>
+        <input type="text" id="testimoni-name" placeholder="Nama Anda">
+        <textarea id="testimoni-message" placeholder="Masukkan testimoni Anda"></textarea>
+        <button onclick="addTestimoni()">Kirim</button>
+    </div>
+
+    <!-- Muat `testimoni.js` setelah halaman selesai dimuat -->
+    <script defer src="assets/js/testimoni.js"></script>
+    <footer>© 2025 SDIT BINA INSANI | Powered by Najmi nata lazuardi</footer>
+</body>
+</html>
