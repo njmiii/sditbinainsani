@@ -1,0 +1,323 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1E3A5F;
+    color: white;
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-color: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Edge */
+}
+
+.atas {
+    margin-top: 20px;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    font-weight: bold;
+}
+
+.ul_atas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    list-style-type: none;
+}
+
+.navbar {
+    background-color: #f8f9fa;
+    margin-top: 35px;
+    width: 100%;
+    height: 40px;
+    position: sticky;
+    top: 0;
+}
+
+.ul_navbar {
+    background-color: bisque;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.li_navbar {
+    margin: 10px;
+    list-style-type: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.li_navbar:hover {
+    background-color: #1E3A5F;
+    transform: scale(1.15);
+}
+
+.a_navbar {
+    color: #1E3A5F;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+
+}
+
+.a_navbar:hover {
+    color: white;
+}
+
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.ul_content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 kolom */
+    gap: 15px;
+    max-width: 1200px;
+}
+
+.li_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.li_content img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.wa-button {
+    width: 10px;
+    height: 10px;
+}
+.wa-button img {
+    width: 4%;
+}
+.footer {
+    background-color: bisque;
+    color: #1E3A5F;
+    text-align: center;
+    height: fit-content;
+}
+footer{
+    background-color:rgb(139, 124, 105);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 50px;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  
+
+    .ul_content {
+        grid-template-columns: repeat(3, 1fr); /* 3 kolom di tablet */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .atas {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    /* Navbar adjustments */
+    .navbar {
+        
+        position: relative;
+        z-index: 10;
+        background-color: #f8f9fa; /* Add background to ensure visibility */
+    }
+
+    .ul_navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 0px;
+        padding: 3px;
+    }
+
+    .li_navbar {
+        margin: 2px;
+        display: inline-block;
+        white-space: nowrap; /* Prevent wrapping of individual items */
+        font-size: 12px; /* Further reduce font size */
+        font-weight: bold;
+
+    }
+
+    .li_navbar img {
+        width: 18px; /* Further reduce icon size */
+        height: auto;
+    }
+    .judul_content{
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+    }
+   .content{
+    font-size: 12px;
+    
+   }
+
+    /* Footer adjustments */
+    .footer {
+        padding: 5px;
+        font-size: 10px;
+        text-align: center;
+        height: auto; /* Adjust height */
+    }
+
+    .footer img {
+        width: 30px;
+        height: auto;
+        margin: 5px;
+    }
+    .ul_content {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom di layar kecil */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .ul_content {
+        grid-template-columns: repeat(2, 1fr); /* 1 kolom di HP */
+    }
+    /* Fine-tune for smaller devices */
+    body{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .atas {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 5px;
+    }
+
+    .ul_atas li img {
+        width: 150px;
+        height: auto;
+    }
+     .ul_navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: px;
+        padding: 2px;
+        width: px;
+    }
+
+    .li_navbar {
+        margin: 0px;
+        display: inline-block;
+        white-space: nowrap; /* Prevent wrapping of individual items */
+        font-size: 9px; /* Further reduce font size */
+        font-weight: bold;
+
+    }
+
+    .li_navbar img {
+        width: 18px; /* Further reduce icon size */
+        height: auto;
+    }
+
+  
+    .footer_container{
+        font-size: 1px;
+    }
+    footer {
+        font-size: 11px;
+        padding: 5px;
+        height: 20px;
+    }
+
+    .footer img {
+        width: 20px;
+        height: auto;
+    }
+}
+
+/* Lightbox Modal */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.lightbox-img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6); /* Latar belakang transparan */
+    border: none;
+    color: white;
+    font-size: 1rem; /* Ukuran font lebih besar */
+    padding: 10px 15px;
+    border-radius: 50%; /* Membuat tombol bulat */
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.prev { left: 5px; }
+.next { right: 5px; }
+
+.prev:hover, .next:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+}

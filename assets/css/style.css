@@ -1,0 +1,646 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1E3A5F;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-color: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Edge */
+}
+
+.atas {
+    margin-top: 20px;
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    font-weight: bold;
+}
+
+.ul_atas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    list-style-type: none;
+}
+
+.navbar {
+    background-color: #f8f9fa;
+    margin-top: 35px;
+    width: 100%;
+    height: 40px;
+    position: sticky;
+    top: 0;
+}
+
+.ul_navbar {
+    background-color: bisque;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.li_navbar {
+    margin: 10px;
+    list-style-type: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.li_navbar:hover {
+    background-color: #1E3A5F;
+    transform: scale(1.15);
+}
+
+.a_navbar {
+    color: #1E3A5F;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+
+}
+
+.a_navbar:hover {
+    color: white;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    /* Mengurangi ukuran slideshow */
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    /* Menjadikan gambar lebih kecil */
+    position: relative;
+    transform: translateX(100%);
+    animation: slideImage 1.5s forwards;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* Tetap menjaga tombol di tengah vertikal */
+    background-color: #f1c40f;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.2s;
+    /* Tambahkan transisi */
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.1);
+    /* Tambahkan scale tanpa menggeser */
+}
+
+.prev {
+    left: 5px;
+}
+
+.next {
+    right: 5px;
+}
+
+.text {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    width: 80%;
+    opacity: 0;
+    animation: slideText 1.5s forwards;
+}
+
+@keyframes slideImage {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideText {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.informasi_ppdb {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 20px;
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color:#f1c40f;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.step-number {
+    font-size: 2rem;
+    font-weight: bold;
+    background-color:#f1c40f;
+    color: #000;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.step-content {
+    display: flex;
+    flex-direction: column;
+    /* Mengatur isi (h2 dan p) dalam kolom */
+    gap: 5px;
+}
+
+.step-content h2 {
+    margin: 0;
+    color: #f1c40f;
+}
+
+.step-content p {
+    margin: 0;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.poster {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    /* Pusatkan elemen secara horizontal */
+    align-items: center;
+    /* Pusatkan elemen secara vertikal */
+    gap: 20px;
+    /* Jarak antar elemen */
+    margin: 50px 0;
+    text-align: center;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    /* Elemen dalam stat-item tetap vertikal */
+    align-items: center;
+    background-color: #1E3A5F;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 200px;
+    /* Lebar tetap untuk setiap elemen */
+}
+
+.stat-item:hover {
+    transform: scale(1.05);
+    background-color: #0d2538;
+}
+
+.stat-icon {
+    font-size: 3rem;
+    /* Ukuran ikon besar */
+    margin-bottom: 10px;
+    color: #f1c40f;
+    /* Warna emas untuk ikon */
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+
+#floating-button {
+    position: fixed;
+    /* Melayang di layar */
+    bottom: 20px;
+    /* Jarak dari bawah */
+    right: 20px;
+    /* Jarak dari kanan */
+    background-color: #f1c40f;
+    /* Warna tombol */
+    color: #1E3A5F;
+    /* Warna teks */
+    padding: 5px 10px;
+    /* Padding untuk membuatnya terlihat besar */
+    border-radius: 50px;
+    /* Membuat tombol oval */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Bayangan */
+    z-index: 1000;
+    /* Agar berada di atas elemen lainnya */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    /* Transisi efek */
+        cursor: pointer;
+    /* Menunjukkan bahwa tombol bisa diklik */
+    height: 40px;
+   
+}
+#floating-button:hover {
+    transform: scale(1.1);
+    /* Membesarkan tombol saat di-hover */
+    background-color: #d4ac0d;
+    /* Ubah warna saat di-hover */
+  
+}
+
+.floating-link {
+    text-decoration: none;
+    /* Hilangkan garis bawah link */
+    font-size: 12px;
+    font-weight: bold;
+
+    color: #1E3A5F;
+    
+    /* Warna teks */
+}
+
+.floating-link:hover {
+    color: white;
+    /* Ubah warna teks saat di-hover */
+}
+
+.footer {
+    background-color: bisque;
+    color: #1E3A5F;
+    text-align: center;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_container {
+    width: 100%;
+}
+
+button {
+    background-color: #f1c40f;
+    color: #1E3A5F;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #d4ac0d;
+    transform: scale(1.05);
+}
+
+.wa-button {
+    width: 10px;
+    height: 10px;
+}
+
+.wa-button img {
+    width: 4%;
+}
+
+footer {
+    background-color: rgb(139, 124, 105);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 50px;
+}
+
+/* Responsive CSS adjustments */
+
+@media screen and (max-width: 768px) {
+
+    #floating-button {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 15px;
+    }
+
+    .floating-link {
+        font-size: 0.9rem;
+    }
+
+
+    /* Adjust .atas spacing */
+    .atas {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    /* Navbar adjustments */
+    .navbar {
+
+        position: relative;
+        z-index: 10;
+        background-color: #f8f9fa;
+        /* Add background to ensure visibility */
+    }
+
+    .ul_navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 0px;
+        padding: 3px;
+    }
+
+    .li_navbar {
+        margin: 2px;
+        display: inline-block;
+        white-space: nowrap;
+        /* Prevent wrapping of individual items */
+        font-size: 12px;
+        /* Further reduce font size */
+        font-weight: bold;
+
+    }
+
+    .li_navbar img {
+        width: 18px;
+        /* Further reduce icon size */
+        height: auto;
+    }
+
+    /* Slideshow adjustments */
+    .slideshow-container {
+        max-width: 100%;
+        margin-top: 50px;
+        /* Prevent overlapping with navbar */
+    }
+
+    .slide img {
+        max-height: 200px;
+    }
+
+    .text {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color:  #1E3A5F;
+        color:white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 50%;
+        font-size: 18px;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .prev:hover,
+    .next:hover {
+        background-color:  #1E3A5F;
+        transform: scale(1.1);
+    }
+
+   
+
+    /* Steps adjustments */
+    .steps {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .step {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        /* Align step content and number */
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        /* Ensure numbers don’t shrink */
+    }
+
+    .step-content {
+        flex-grow: 1;
+        /* Ensure content takes available space */
+        margin-left: 10px;
+        /* Add spacing between number and content */
+    }
+
+    /* Poster adjustments */
+    .poster img {
+        width: 90%;
+        height: auto;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .stat-item {
+        width: 80%;
+        /* Sesuaikan lebar elemen */
+    }
+
+
+    /* Footer adjustments */
+    .footer {
+        padding: 5px;
+        font-size: 10px;
+        text-align: center;
+        height: auto;
+        /* Adjust height */
+    }
+
+    .footer img {
+        width: 30px;
+        height: auto;
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    /* Fine-tune for smaller devices */
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .atas {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 5px;
+    }
+
+    .ul_atas li img {
+        width: 150px;
+        height: auto;
+    }
+
+    .ul_navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: px;
+        padding: 2px;
+        width: px;
+    }
+
+    .li_navbar {
+        margin: 0px;
+        display: inline-block;
+        white-space: nowrap;
+        /* Prevent wrapping of individual items */
+        font-size: 9px;
+        /* Further reduce font size */
+        font-weight: bold;
+
+    }
+
+    .li_navbar img {
+        width: 18px;
+        /* Further reduce icon size */
+        height: auto;
+    }
+
+    .slideshow-container {
+        max-width: 100%;
+        margin-top: 50px;
+        /* Prevent overlapping with navbar */
+    }
+
+    .slide img {
+        max-height: 175px;
+    }
+
+    .text h1 {
+        font-size: 18px;
+    }
+
+    .text p {
+        font-size: 12px;
+    }
+
+    .step-content h2 {
+        font-size: 18px;
+    }
+
+    .step-content p {
+        font-size: 14px;
+    }
+
+    .footer_container {
+        font-size: 10px;
+    }
+
+    footer {
+        font-size: 10px;
+        padding: 5px;
+        height: 20px;
+
+    }
+
+    .footer img {
+        width: 20px;
+        height: auto;
+    }
+}
